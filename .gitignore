@@ -1,0 +1,40 @@
+# ====================================================================
+# GITIGNORE CHO HỆ THỐNG RAG CO3101
+# ====================================================================
+
+# Python bytecode & cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+env/
+venv/
+ENV/
+.venv/
+
+# Environment variables & Secret API Keys (BẢO MẬT - TUYỆT ĐỐI KHÔNG PUSH)
+.env
+.env.local
+.env.*.local
+
+# Dữ liệu tài liệu người dùng (Giữ thư mục trống thông qua .gitkeep)
+data/raw/*
+!data/raw/.gitkeep
+
+# Cơ sở dữ liệu Vector FAISS & Metadata (Sinh tự động khi nạp tài liệu)
+storage/*
+!storage/.gitkeep
+storage/faiss_index/*
+!storage/faiss_index/.gitkeep
+*.bin
+metadata.json
+
+# IDE, OS & Logs
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log
