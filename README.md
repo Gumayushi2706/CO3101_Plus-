@@ -1,7 +1,4 @@
 # Hệ thống Hỏi - Đáp trên Tài liệu dựa trên RAG (CO3101)
-**Khoa Khoa học và Kỹ thuật Máy tính - Trường Đại học Bách Khoa, ĐHQG TP.HCM**  
-**Hướng đề tài:** Trí tuệ Nhân tạo (Artificial Intelligence) | **Lớp:** L06 - HK261  
-**Giảng viên hướng dẫn:** ThS. Vương Bá Thịnh  
 
 ---
 
@@ -146,16 +143,3 @@ python tests/test_optimizations.py
 
 ---
 
-## 📊 6. Siêu tham số chuẩn (Hyperparameters)
-
-| Tham số | Giá trị | Ý nghĩa |
-|:---|:---:|:---|
-| **Chunk Size / Overlap** | `900` / `100` | Kích thước đoạn trích và độ chồng lấp bảo toàn ngữ nghĩa |
-| **Embedding Model** | `BAAI/bge-m3` | Mô hình nhúng đa ngôn ngữ 1024 chiều, chuẩn hóa L2 |
-| **FAISS HNSW** | $M=16, efC=200, efS=50$ | Cấu trúc đồ thị HNSW cân bằng độ chính xác (>98%) và tốc độ (<5ms) |
-| **Dense / Sparse Top-k** | `15` / `15` | Số lượng ứng viên từ HNSW và BM25Plus |
-| **RRF Top-N / k** | `10` / `60` | Số lượng ứng viên sau dung hợp thứ hạng tương hỗ |
-| **Reranker Model** | `BAAI/bge-reranker-v2-m3` | Cross-Encoder đánh giá tương quan ngữ nghĩa sâu |
-| **Threshold ($\tau$)** | $\ge 0.50$ | Ngưỡng tương quan tối thiểu sau Sigmoid lọc sạch nhiễu |
-| **LLM Top-k** | `3` | Số lượng bằng chứng tinh lọc tốt nhất đưa vào ngữ cảnh |
-| **LLM Model** | `gemini-3.5-flash-lite` | Google Gemini 3.5 Flash-Lite |
